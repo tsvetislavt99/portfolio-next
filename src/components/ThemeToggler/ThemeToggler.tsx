@@ -1,7 +1,7 @@
 import { useEffect, useState, useLayoutEffect } from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/solid';
 
-export default function ThemeToggler() {
+export default function ThemeToggler(): JSX.Element {
   const [darkMode, setDarkMode] = useState<boolean>();
   const useIsomorphicLayoutEffect =
     typeof window !== 'undefined' ? useLayoutEffect : useEffect;
