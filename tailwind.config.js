@@ -6,7 +6,19 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        space: ['"Space Grotesk"', 'sans-serif'],
+      },
+      colors: {
+        dark: {
+          primary: '#0F1624',
+        },
+        light: {
+          primary: '#fff',
+        },
+      },
+    },
   },
   plugins: [],
 };
