@@ -2,7 +2,11 @@ import { Layout } from 'layout/Layout';
 import dbConnect from 'lib/dbConnect';
 
 export default function IndexPage({ meow }) {
-  return <Layout>Meow</Layout>;
+  return (
+    <Layout>
+      <p className="font-space">Meow</p>
+    </Layout>
+  );
 }
 
 export async function getServerSideProps() {

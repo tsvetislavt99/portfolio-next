@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line no-undef
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -8,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        space: ['"Space Grotesk"', 'sans-serif'],
+        sans: ['"Space Grotesk"', 'sans-serif'],
       },
       colors: {
         dark: {

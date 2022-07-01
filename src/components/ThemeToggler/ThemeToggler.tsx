@@ -1,4 +1,4 @@
-import { useEffect, useState, useLayoutEffect } from 'react';
+import React, { useEffect, useState, useLayoutEffect } from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/solid';
 
 export default function ThemeToggler(): JSX.Element {
@@ -33,9 +33,9 @@ export default function ThemeToggler(): JSX.Element {
   return (
     <div onClick={() => onToggle()}>
       {darkMode ? (
-        <MoonIcon className="w-8 h-8 text-[#fff] hover:scale-110 transition duration-500" />
+        <MoonIcon className="w-6 h-6 text-[#fff] hover:scale-110 transition duration-500" />
       ) : (
-        <SunIcon className="w-8 h-8 text-[#0F1624] hover:scale-110 transition duration-500" />
+        <SunIcon className="w-6 h-6 text-[#0F1624] hover:scale-110 transition duration-500" />
       )}
     </div>
   );
