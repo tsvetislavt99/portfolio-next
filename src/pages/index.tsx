@@ -1,10 +1,11 @@
+import Hero from 'components/Hero';
 import { Layout } from 'layout/Layout';
 import dbConnect from 'lib/dbConnect';
 
 export default function IndexPage({ meow }) {
   return (
     <Layout>
-      <p className="font-space">Meow</p>
+      <Hero />
     </Layout>
   );
 }
