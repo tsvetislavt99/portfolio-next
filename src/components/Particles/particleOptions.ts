@@ -2,37 +2,32 @@ import type { ISourceOptions } from 'tsparticles-engine';
 
 export const options: ISourceOptions = {
   background: {
-    color: '#0F1624',
+    color: 'transparent',
   },
   fullScreen: {
     enable: false,
   },
-  fpsLimit: 120,
+  fpsLimit: 60,
   interactivity: {
     events: {
       onHover: {
         enable: true,
         mode: 'connect',
       },
+      onClick: {
+        enable: true,
+        mode: 'push',
+      },
       resize: true,
-    },
-    modes: {
-      push: {
-        quantity: 4,
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.4,
-      },
     },
   },
   particles: {
     color: {
-      value: ['#F5B808', '#F1F7ED'],
+      value: ['#F5B808', '#893168'],
     },
     links: {
-      color: '#ffffff',
-      distance: 150,
+      color: 'random',
+      distance: 100,
       enable: true,
       opacity: 0.5,
       width: 1,
@@ -46,8 +41,8 @@ export const options: ISourceOptions = {
       outModes: {
         default: 'bounce',
       },
-      random: false,
-      speed: 2,
+      random: true,
+      speed: 2.5,
       straight: false,
     },
     number: {
@@ -55,10 +50,10 @@ export const options: ISourceOptions = {
         enable: true,
         area: 800,
       },
-      value: 100,
+      value: 150,
     },
     opacity: {
-      value: 0.5,
+      value: 1,
     },
     shape: {
       type: 'circle',

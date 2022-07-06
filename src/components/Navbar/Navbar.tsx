@@ -58,9 +58,9 @@ export default function Navbar() {
           </div>
           <div onClick={handleNav} className="block sm:hidden">
             {nav ? (
-              <XIcon className="h-6 w-6" color="white" />
+              <XIcon className="h-6 w-6" />
             ) : (
-              <MenuIcon className="h-6 w-6" color="white" />
+              <MenuIcon className="h-6 w-6" />
             )}
           </div>
         </div>
