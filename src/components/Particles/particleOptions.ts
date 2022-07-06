@@ -1,6 +1,6 @@
 import type { ISourceOptions } from 'tsparticles-engine';
 
-export const optionsLight: ISourceOptions = {
+export const options: ISourceOptions = {
   background: {
     color: '#0F1624',
   },
@@ -28,7 +28,7 @@ export const optionsLight: ISourceOptions = {
   },
   particles: {
     color: {
-      value: '#ffffff',
+      value: ['#F5B808', '#F1F7ED'],
     },
     links: {
       color: '#ffffff',
@@ -55,7 +55,7 @@ export const optionsLight: ISourceOptions = {
         enable: true,
         area: 800,
       },
-      value: 75,
+      value: 100,
     },
     opacity: {
       value: 0.5,
