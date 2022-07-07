@@ -49,9 +49,9 @@ export default function ProjectCard({
   technologiesUsed,
 }: ProjectCardProps): JSX.Element {
   return (
-    <div className="md:w-[75rem] md:h-[20.5rem] w-[20.5rem] h-[40rem] mx-auto p-4 flex flex-col ease-linear duration-300 md:flex-row-reverse">
+    <div className="md:w-full md:h-[20.5rem] w-[20.5rem] h-[40rem] mx-auto p-4 flex flex-col ease-linear duration-300 md:flex-row-reverse">
       <div className="h-full w-full rounded-2xl basis-2/3 relative">
-        <div className="h-full w-full md:ml-5 relative border-2 border-white rounded-2xl">
+        <div className="h-full w-full md:mx-2 relative border-2 border-white rounded-2xl">
           <Image
             src={imgUrl}
             alt="thumbnail"
