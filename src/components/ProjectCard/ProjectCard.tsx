@@ -56,7 +56,7 @@ export default function ProjectCard({
             src={imgUrl}
             alt="thumbnail"
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
             className="rounded-xl"
           />
         </div>
