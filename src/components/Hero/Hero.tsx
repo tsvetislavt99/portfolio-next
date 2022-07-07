@@ -1,7 +1,6 @@
 import ParticlesContainer from 'components/Particles';
+import SocialSection from 'components/SocialSection';
 import React from 'react';
-import GithubIcon from '../../public/social-icons/github.svg';
-import LinkedInIcon from '../../public/social-icons/linkedin.svg';
 
 export default function Hero(): JSX.Element {
   return (
@@ -17,32 +16,7 @@ export default function Hero(): JSX.Element {
             About me
           </button>
           <div className="h-10 w-1 border-r-2 border-dark-primary dark:border-light-primary pl-5" />
-          {/** TODO: Extract into social component */}
-          <div className="pl-5 flex flex-row justify-between items-center">
-            <a
-              href="https://github.com/tsvetislavt99"
-              target="_blank"
-              rel="noreferrer"
-              className="pr-3"
-            >
-              <GithubIcon
-                className=" dark:fill-light-primary fill-dark-primary hover:scale-110 transition duration-300"
-                width={30}
-                height={30}
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/tsvetislav-todorov-7ba0b11a4/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <LinkedInIcon
-                className=" dark:fill-light-primary fill-dark-primary hover:scale-110 transition duration-300"
-                width={30}
-                height={30}
-              />
-            </a>
-          </div>
+          <SocialSection />
         </div>
       </div>
     </div>
