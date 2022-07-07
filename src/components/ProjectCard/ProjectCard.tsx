@@ -17,9 +17,9 @@ import { CodeIcon } from '@heroicons/react/solid';
 const technologyMap = new Map([
   [
     'javascript',
-    <SiJavascript key="javascript" className="w-6 h-6" color="yellow" />,
+    <SiJavascript key="javascript" className="w-6 h-6 text-yellow-500" />,
   ],
-  ['nodejs', <SiNodedotjs key="nodejs" className="w-6 h-6" color="green" />],
+  ['nodejs', <SiNodedotjs key="nodejs" className="w-6 h-6 text-green-700" />],
   ['express', <SiExpress key="express" className="w-6 h-6" />],
   [
     'jsonwebtokens',
