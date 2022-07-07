@@ -67,12 +67,18 @@ export default function Navbar() {
         <div
           className={
             nav
-              ? 'sm:hidden fixed left-0 top-0 w-[60%] border-r border-r-gray-900 h-full bg-[#000300] ease-in-out duration-500'
+              ? 'sm:hidden fixed left-0 top-0 w-[60%] border-r border-r-gray-900 h-full bg-light-primary dark:bg-dark-primary ease-in-out duration-500 z-10'
               : 'fixed left-[-100%]  ease-out duration-1000'
           }
         >
-          <h1 className="w-full text-3xl font-bold text-[#00df9a] mt-4 ml-4 uppercase">
-            comics.
+          <h1 className="flex flex-row items-center mt-3 ml-3 w-full text-3xl font-extrabold text-dark uppercase">
+            <CodeIcon
+              className="h-8 w-8"
+              color="text-dark-primary dark:text-light-primary"
+            />
+            <span className="ml-3">
+              <Link href="/">t.works</Link>
+            </span>
           </h1>
           <ul className="pt-8 uppercase">
             <li className="p-4 border-b border-b-gray-900">

@@ -10,13 +10,9 @@ export const options: ISourceOptions = {
   fpsLimit: 60,
   interactivity: {
     events: {
-      onHover: {
-        enable: true,
-        mode: 'connect',
-      },
       onClick: {
         enable: true,
-        mode: 'push',
+        mode: 'attract',
       },
       resize: true,
     },
@@ -35,22 +31,15 @@ export const options: ISourceOptions = {
     collisions: {
       enable: true,
     },
+    number: {
+      value: 50,
+    },
     move: {
       direction: 'none',
       enable: true,
-      outModes: {
-        default: 'bounce',
-      },
-      random: true,
-      speed: 2.5,
+      random: false,
+      speed: 1,
       straight: false,
-    },
-    number: {
-      density: {
-        enable: true,
-        area: 800,
-      },
-      value: 150,
     },
     opacity: {
       value: 1,
