@@ -8,8 +8,19 @@ export default function Projects() {
         Projects
       </h1>
       <div>
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard
+          title="[ReactiveBlog]: Full-stack blog application"
+          imgUrl={'/project-images/reactiveBlog.png'}
+          hasLiveDemo={true}
+          hasSourceCode={true}
+          technologiesUsed={[
+            'JavaScript',
+            'React',
+            'NodeJS',
+            'Express',
+            'MongoDB',
+          ]}
+        />
       </div>
     </div>
   );
