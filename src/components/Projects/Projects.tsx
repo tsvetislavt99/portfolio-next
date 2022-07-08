@@ -1,5 +1,6 @@
-import ProjectCard from 'components/ProjectCard';
 import React from 'react';
+import { projectsData } from './projectsData';
+import ProjectCard from '../ProjectCard';
 
 export default function Projects() {
   return (
@@ -8,19 +9,9 @@ export default function Projects() {
         Projects
       </h1>
       <div>
-        <ProjectCard
-          title="[ReactiveBlog]: Full-stack blog application"
-          imgUrl={'/project-images/reactiveBlog.png'}
-          hasLiveDemo={true}
-          hasSourceCode={true}
-          technologiesUsed={[
-            'JavaScript',
-            'React',
-            'NodeJS',
-            'Express',
-            'MongoDB',
-          ]}
-        />
+        {projectsData.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
       </div>
     </div>
   );

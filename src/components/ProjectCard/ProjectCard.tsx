@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaReact } from 'react-icons/fa';
+import { FaReact, FaPlay } from 'react-icons/fa';
 import {
   SiExpress,
   SiJavascript,
@@ -8,8 +8,12 @@ import {
   SiJsonwebtokens,
   SiTypescript,
   SiMongodb,
+  SiJest,
+  SiFirebase,
+  SiNextdotjs,
+  SiHeroku,
+  SiVercel,
 } from 'react-icons/si';
-import { FaPlay } from 'react-icons/fa';
 import { CodeIcon } from '@heroicons/react/solid';
 
 // TODO: Cleanup
@@ -25,12 +29,20 @@ const technologyMap = new Map([
     'jsonwebtokens',
     <SiJsonwebtokens key="jsonwebtokens" className="w-6 h-6" />,
   ],
-  ['react', <FaReact key="react" className="w-6 h-6" color="cyan" />],
+  ['react', <FaReact key="react" className="w-6 h-6 text-cyan-500" />],
   [
     'typescript',
-    <SiTypescript key="typescript" className="w-6 h-6" color="blue" />,
+    <SiTypescript key="typescript" className="w-6 h-6 text-blue-600" />,
   ],
-  ['mongodb', <SiMongodb key="mongodb" className="w-6 h-6" color="green" />],
+  ['mongodb', <SiMongodb key="mongodb" className="w-6 h-6 text-green-700" />],
+  ['jest', <SiJest key="jest" className="w-6 h-6 text-red-700" />],
+  [
+    'firebase',
+    <SiFirebase key="firebase" className="w-6 h-6 text-orange-500" />,
+  ],
+  ['next.js', <SiNextdotjs key="nextjs" className="w-6 h-6" />],
+  ['heroku', <SiHeroku key="heroku" className="w-6 h-6 text-purple-800" />],
+  ['vercel', <SiVercel key="vercel" className="w-6 h-6" />],
 ]);
 
 export interface ProjectCardProps {
