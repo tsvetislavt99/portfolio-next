@@ -15,13 +15,6 @@ export const projectsData = [
     ],
   },
   {
-    title: '[Next Fire Blog]: Full-stack blog application',
-    imgUrl: '/project-images/nextFireBlog.png',
-    hasLiveDemo: true,
-    hasSourceCode: true,
-    technologiesUsed: ['TypeScript', 'React', 'Next.js', 'Firebase'],
-  },
-  {
     title: '[ReactiveBlog]: Full-stack blog application',
     imgUrl: '/project-images/reactiveBlog.png',
     hasLiveDemo: true,
