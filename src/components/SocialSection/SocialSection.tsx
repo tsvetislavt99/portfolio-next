@@ -1,6 +1,6 @@
 import React from 'react';
-import GithubIcon from '../../public/social-icons/github.svg';
-import LinkedInIcon from '../../public/social-icons/linkedin.svg';
+import GithubIcon from '../../assets/social-icons/github.svg';
+import LinkedInIcon from '../../assets/social-icons/linkedin.svg';
 
 export default function SocialSection() {
   return (
