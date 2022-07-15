@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <>
       <div className="flex flex-nowrap justify-between items-center max-w-[1240px] mx-auto px-4 h-24 text-dark-primary dark:text-light-primary">
-        <h1 className="flex w-content text-2xl font-extrabold text-dark uppercase">
+        <h1 className="flex w-content text-2xl font-extrabold text-dark uppercase select-none">
           <CodeIcon
             className="h-8 w-8"
             color="text-dark-primary dark:text-light-primary"
