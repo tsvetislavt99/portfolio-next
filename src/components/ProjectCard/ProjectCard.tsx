@@ -90,7 +90,7 @@ export default function ProjectCard({
   technologiesUsed,
 }: ProjectCardProps): JSX.Element {
   return (
-    <div className="flex flex-col basis-1/2 md:max-w-[350px] lg:max-w-[450px] justify-between mr-2 rounded-2xl mb-10">
+    <div className="flex flex-col basis-1/2 w-full md:max-w-[43%] justify-between xs:mr-2 rounded-2xl mb-10">
       <h1 className="m-2 text-xl sm:text-2xl md:text-4xl font-bold dark:text-white">
         {title}
       </h1>
@@ -125,7 +125,7 @@ export default function ProjectCard({
         </button>
         <button
           disabled={!hasSourceCode}
-          className="w-full md:m-2 m-auto mt-8 dark:bg-gradient-to-r dark:from-light-accent dark:to-light-secondary bg-black pt-2 pb-2 pl-6 pr-4 rounded-full flex flex-row justify-center items-center hover:scale-105 ease-linear duration-300"
+          className="w-full md:m-2 m-auto mt-4 xs:mt-8 dark:bg-gradient-to-r dark:from-light-accent dark:to-light-secondary bg-black pt-2 pb-2 pl-6 pr-4 rounded-full flex flex-row justify-center items-center hover:scale-105 ease-linear duration-300"
         >
           <CodeIcon className="w-6 h-6" color="#fff" />
           <h1 className="text-white md:text-sm lg:text-base font-semibold pl-2">
