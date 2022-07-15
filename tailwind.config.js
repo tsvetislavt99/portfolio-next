@@ -14,12 +14,12 @@ module.exports = {
       colors: {
         dark: {
           primary: '#0F1624',
-          accent: '#893168',
+          accent: '#009393',
         },
         light: {
           primary: '#F1F7ED',
-          accent: '#F5B808',
-          secondary: '#5da9e9',
+          accent: '#009393',
+          secondary: '#00e0c6',
         },
       },
     },
