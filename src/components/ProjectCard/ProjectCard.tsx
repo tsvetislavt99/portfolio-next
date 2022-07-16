@@ -1,79 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
-import { FaReact, FaPlay } from 'react-icons/fa';
-import {
-  SiExpress,
-  SiJavascript,
-  SiNodedotjs,
-  SiJsonwebtokens,
-  SiTypescript,
-  SiMongodb,
-  SiJest,
-  SiFirebase,
-  SiNextdotjs,
-  SiHeroku,
-  SiVercel,
-} from 'react-icons/si';
+import { FaPlay } from 'react-icons/fa';
+import { technologyMap } from 'utils/get-project-technology-icon';
 import { CodeIcon } from '@heroicons/react/solid';
-
-// TODO: Cleanup
-
-const technologyMap = new Map([
-  [
-    'javascript',
-    <SiJavascript
-      key="javascript"
-      className="w-4 xs:w-6 h-4 xs:h-6 text-yellow-500"
-    />,
-  ],
-  [
-    'nodejs',
-    <SiNodedotjs
-      key="nodejs"
-      className="w-4 xs:w-6 h-4 xs:h-6 text-green-700"
-    />,
-  ],
-  ['express', <SiExpress key="express" className="w-4 xs:w-6 h-4 xs:h-6" />],
-  [
-    'jsonwebtokens',
-    <SiJsonwebtokens key="jsonwebtokens" className="w-4 xs:w-6 h-4 xs:h-6" />,
-  ],
-  [
-    'react',
-    <FaReact key="react" className="w-4 xs:w-6 h-4 xs:h-6 text-cyan-500" />,
-  ],
-  [
-    'typescript',
-    <SiTypescript
-      key="typescript"
-      className="w-4 xs:w-6 h-4 xs:h-6 text-blue-600"
-    />,
-  ],
-  [
-    'mongodb',
-    <SiMongodb
-      key="mongodb"
-      className="w-4 xs:w-6 h-4 xs:h-6 text-green-700"
-    />,
-  ],
-  [
-    'jest',
-    <SiJest key="jest" className="w-4 xs:w-6 h-4 xs:h-6 text-red-700" />,
-  ],
-  [
-    'firebase',
-    <SiFirebase
-      key="firebase"
-      className="w-4 xs:w-6 h-4 xs:h-6 text-orange-500"
-    />,
-  ],
-  ['next.js', <SiNextdotjs key="nextjs" className="w-4 xs:w-6 h-4 xs:h-6" />],
-  [
-    'heroku',
-    <SiHeroku key="heroku" className="w-4 xs:w-6 h-4 xs:h-6 text-purple-800" />,
-  ],
-  ['vercel', <SiVercel key="vercel" className="w-4 xs:w-6 h-4 xs:h-6" />],
-]);
 
 export interface ProjectCardProps {
   title: string;
@@ -116,7 +44,7 @@ export default function ProjectCard({
       <div className="flex flex-col xs:flex-row">
         <button
           disabled={!hasLiveDemo}
-          className="w-full mr-6 md:mr-0 md:m-2 m-auto mt-8 dark:bg-gradient-to-r dark:from-light-accent dark:to-light-secondary bg-black pt-2 pb-2 pl-6 pr-4 rounded-full flex flex-row justify-center items-center hover:scale-105 ease-linear duration-300"
+          className="w-full md:m-2 m-auto mt-4 xs:mt-8 dark:bg-gradient-to-r dark:from-light-accent dark:to-light-secondary bg-black pt-2 pb-2 pl-6 pr-4 rounded-full flex flex-row justify-center items-center hover:scale-105 ease-linear duration-300"
         >
           <FaPlay className="animate-ping" size={10} color="#fff" />
           <h1 className="text-white md:text-sm lg:text-base  font-semibold pl-2">
