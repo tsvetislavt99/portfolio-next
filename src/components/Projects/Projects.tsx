@@ -8,7 +8,7 @@ export default function Projects() {
       <h1 className="py-5 px-5 sm:px-10 text-2xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-dark-primary to-dark-primary/80 dark:from-light-primary dark:to-light-primary/70">
         Projects
       </h1>
-      <div className="max-w-[1024px] mx-auto px-8 lg:px-0 flex flex-col md:flex-row justify-between ease-linear duration-300">
+      <div className="max-w-[1240px] mx-auto px-8 lg:px-8 flex flex-col md:flex-row justify-between ease-linear duration-300">
         {projectsData.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}
