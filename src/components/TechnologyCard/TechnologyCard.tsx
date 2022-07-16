@@ -18,6 +18,15 @@ export default function TechnologyCard({
 
   return (
     <div className="relative">
+      <p
+        className={
+          showDescription
+            ? 'absolute text-sm text-center font-semibold underline left-1/2 -translate-x-1/2 top-1/4 -z-10'
+            : 'hidden'
+        }
+      >
+        {description}
+      </p>
       <div
         onMouseEnter={() => setShowDescription(true)}
         onMouseLeave={() => setShowDescription(false)}
@@ -26,15 +35,6 @@ export default function TechnologyCard({
         {icon}
         <p className="mt-3 first-letter:uppercase">{title}</p>
       </div>
-      <p
-        className={
-          showDescription
-            ? 'absolute text-sm font-semibold underline left-1/2 -translate-x-1/2 top-1/4 -z-10'
-            : 'hidden'
-        }
-      >
-        {description}
-      </p>
     </div>
   );
 }
