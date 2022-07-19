@@ -8,6 +8,7 @@ export default function Technologies() {
         Technologies
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 px-5 sm:px-10">
+        {/* TODO: Extract into a map */}
         <TechnologyCard
           title="react"
           description="Framework created by an evil corporation - ✔️"
