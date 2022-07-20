@@ -54,3 +54,13 @@ export const options: ISourceOptions = {
   },
   detectRetina: true,
 };
+
+export const mobileOptions = {
+  ...options,
+  particles: {
+    ...options.particles,
+    number: {
+      value: 25,
+    },
+  },
+};

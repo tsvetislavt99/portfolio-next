@@ -1,7 +1,8 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
+import { isMobile } from 'react-device-detect';
 import { loadFull } from 'tsparticles';
-import { options } from './particleOptions';
+import { mobileOptions, options } from './particleOptions';
 
 export default function ParticlesContainer(): JSX.Element {
   const particlesInit = async (main) => {
@@ -13,7 +14,7 @@ export default function ParticlesContainer(): JSX.Element {
         style={{ borderRadius: '20px', position: 'absolute', padding: '0px' }}
         id="tsparticles"
         init={particlesInit}
-        options={options}
+        options={isMobile ? mobileOptions : options}
       />
     </div>
   );
