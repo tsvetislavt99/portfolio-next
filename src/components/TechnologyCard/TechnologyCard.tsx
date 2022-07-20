@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 import { technologyMap } from 'utils/get-technology-icon';
@@ -12,6 +13,8 @@ export default function TechnologyCard({
   description,
 }: TechnologyCardProps): JSX.Element {
   const [showDescription, setShowDescription] = React.useState(false);
+  const [showDescriptionMobile, setShowDescriptionMobile] =
+    React.useState(false);
   const icon = React.useMemo(() => {
     const icon = technologyMap.get(title);
     return icon;
@@ -21,7 +24,7 @@ export default function TechnologyCard({
     <div className="relative">
       <p
         className={
-          showDescription
+          showDescription || showDescriptionMobile
             ? 'absolute text-sm text-center font-semibold underline left-1/2 -translate-x-1/2 top-1/4 -z-10'
             : 'hidden'
         }
@@ -29,11 +32,20 @@ export default function TechnologyCard({
         {description}
       </p>
       <div
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
         onMouseEnter={isMobile ? () => {} : () => setShowDescription(true)}
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
         onMouseLeave={isMobile ? () => {} : () => setShowDescription(false)}
-        className="flex flex-col items-center justify-center py-6 rounded-lg shadow-lg hover:opacity-20 hover:shadow-black"
+        onTouchStart={
+          isMobile ? () => setShowDescriptionMobile(true) : () => {}
+        }
+        onTouchEnd={isMobile ? () => setShowDescriptionMobile(false) : () => {}}
+        onTouchCancel={
+          isMobile ? () => setShowDescriptionMobile(false) : () => {}
+        }
+        className={
+          showDescriptionMobile
+            ? 'flex flex-col items-center justify-center py-6 rounded-lg shadow-lg opacity-20 shadow-black'
+            : 'flex flex-col items-center justify-center py-6 rounded-lg shadow-lg md:hover:opacity-20 md:hover:shadow-black'
+        }
       >
         {icon}
         <p className="mt-3 first-letter:uppercase">{title}</p>
