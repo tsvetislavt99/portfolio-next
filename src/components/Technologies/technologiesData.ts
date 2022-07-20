@@ -33,7 +33,7 @@ export const technologiesData = [
   },
   {
     title: 'react',
-    description: 'Framework created by an evil corporation - ✔️',
+    description: 'Framework created by an evil corporation',
   },
   {
     title: 'redux',
@@ -41,7 +41,7 @@ export const technologiesData = [
   },
   {
     title: 'next.js',
-    description: 'Because preparing things for prod is actually hard',
+    description: 'Because preparing for prod is hard',
   },
   {
     title: 'express',
@@ -61,7 +61,7 @@ export const technologiesData = [
   },
   {
     title: 'firebase',
-    description: 'BaaS created by an evil corporation - ✔️',
+    description: 'BaaS created by an evil corporation',
   },
   {
     title: 'Auth0',

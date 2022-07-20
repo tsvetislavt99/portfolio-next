@@ -25,7 +25,7 @@ export default function TechnologyCard({
       <p
         className={
           showDescription || showDescriptionMobile
-            ? 'absolute text-sm text-center font-semibold underline left-1/2 -translate-x-1/2 top-1/4 -z-10'
+            ? 'absolute flex items-center justify-center h-full text-sm text-center font-semibold underline left-1/2 -translate-x-1/2 -z-10'
             : 'hidden'
         }
       >
