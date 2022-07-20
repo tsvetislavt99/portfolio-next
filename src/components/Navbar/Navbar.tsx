@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { MenuIcon, XIcon, CodeIcon } from '@heroicons/react/solid';
+import OutsideClickHandler from 'react-outside-click-handler';
 import ThemeToggler from 'components/ThemeToggler';
 
 export default function Navbar() {
@@ -50,34 +51,47 @@ export default function Navbar() {
             )}
           </div>
         </div>
+        <OutsideClickHandler
+          display="contents"
+          // eslint-disable-next-line @typescript-eslint/no-empty-function
+          onOutsideClick={nav ? handleNav : () => {}}
+        >
+          <div
+            className={
+              nav
+                ? 'sm:hidden fixed left-0 top-0 w-[60%] border-r border-r-gray-900 h-full bg-light-primary dark:bg-dark-primary ease-in-out duration-500 z-20'
+                : 'fixed left-[-100%] top-0 w-[60%] border-r border-r-gray-900 h-full bg-light-primary dark:bg-dark-primary ease-out duration-1000 z-20'
+            }
+          >
+            <h1 className="flex flex-row items-center my-5 mx-3 w-full text-2xl font-extrabold text-dark uppercase">
+              <CodeIcon
+                className="h-8 w-8"
+                color="text-dark-primary dark:text-light-primary"
+              />
+              <span className="ml-3">
+                <Link href="/">t.works</Link>
+              </span>
+            </h1>
+            <ul className="pt-8 uppercase">
+              <li className="p-4 border-b border-b-gray-900">
+                <Link href="/">Projects</Link>
+              </li>
+              <li className="p-4 border-b border-b-gray-900">
+                <Link href="/catalog">Technology</Link>
+              </li>
+              <li className="p-4 border-b border-b-gray-900">
+                <Link href="/catalog">About</Link>
+              </li>
+            </ul>
+          </div>
+        </OutsideClickHandler>
         <div
           className={
             nav
-              ? 'sm:hidden fixed left-0 top-0 w-[60%] border-r border-r-gray-900 h-full bg-light-primary dark:bg-dark-primary ease-in-out duration-500 z-10'
-              : 'fixed left-[-100%] top-0 w-[60%] border-r border-r-gray-900 h-full bg-light-primary dark:bg-dark-primary ease-out duration-1000 z-10'
+              ? 'sm:hidden fixed left-0 top-0 w-[100%] h-screen opacity-60 bg-dark-primary z-10'
+              : 'fixed left-[-100%] top-0 w-[60%] border-r border-r-gray-900 h-full bg-light-primary dark:bg-dark-primary   z-10'
           }
-        >
-          <h1 className="flex flex-row items-center mt-3 ml-3 w-full text-3xl font-extrabold text-dark uppercase">
-            <CodeIcon
-              className="h-8 w-8"
-              color="text-dark-primary dark:text-light-primary"
-            />
-            <span className="ml-3">
-              <Link href="/">t.works</Link>
-            </span>
-          </h1>
-          <ul className="pt-8 uppercase">
-            <li className="p-4 border-b border-b-gray-900">
-              <Link href="/">Projects</Link>
-            </li>
-            <li className="p-4 border-b border-b-gray-900">
-              <Link href="/catalog">Technology</Link>
-            </li>
-            <li className="p-4 border-b border-b-gray-900">
-              <Link href="/catalog">About</Link>
-            </li>
-          </ul>
-        </div>
+        ></div>
       </div>
     </>
   );
