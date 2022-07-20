@@ -5,20 +5,9 @@ import ThemeToggler from 'components/ThemeToggler';
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-  const [mobileSearch, setMobileSearch] = useState(false);
 
   const handleNav = () => {
     setNav((nav) => !nav);
-    if (mobileSearch) {
-      setMobileSearch((mobileSearch) => !mobileSearch);
-    }
-  };
-
-  const handleMobileSearch = () => {
-    setMobileSearch((mobileSearch) => !mobileSearch);
-    if (nav) {
-      setNav((nav) => !nav);
-    }
   };
 
   return (
@@ -50,10 +39,7 @@ export default function Navbar() {
         </ul>
         {/** Mobile nav */}
         <div className="flex flex-row flex-nowrap sm:hidden">
-          <div
-            onClick={handleMobileSearch}
-            className="text-white block mr-2 sm:hidden"
-          >
+          <div className="text-white block mr-2 sm:hidden">
             <ThemeToggler />
           </div>
           <div onClick={handleNav} className="block sm:hidden">
@@ -68,7 +54,7 @@ export default function Navbar() {
           className={
             nav
               ? 'sm:hidden fixed left-0 top-0 w-[60%] border-r border-r-gray-900 h-full bg-light-primary dark:bg-dark-primary ease-in-out duration-500 z-10'
-              : 'fixed left-[-100%]  ease-out duration-1000'
+              : 'fixed left-[-100%] top-0 w-[60%] border-r border-r-gray-900 h-full bg-light-primary dark:bg-dark-primary ease-out duration-1000 z-10'
           }
         >
           <h1 className="flex flex-row items-center mt-3 ml-3 w-full text-3xl font-extrabold text-dark uppercase">
@@ -82,10 +68,13 @@ export default function Navbar() {
           </h1>
           <ul className="pt-8 uppercase">
             <li className="p-4 border-b border-b-gray-900">
-              <Link href="/">Home</Link>
+              <Link href="/">Projects</Link>
             </li>
             <li className="p-4 border-b border-b-gray-900">
-              <Link href="/catalog">Catalog</Link>
+              <Link href="/catalog">Technology</Link>
+            </li>
+            <li className="p-4 border-b border-b-gray-900">
+              <Link href="/catalog">About</Link>
             </li>
           </ul>
         </div>
