@@ -1,4 +1,5 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 import { technologyMap } from 'utils/get-technology-icon';
 
 interface TechnologyCardProps {
@@ -28,8 +29,10 @@ export default function TechnologyCard({
         {description}
       </p>
       <div
-        onMouseEnter={() => setShowDescription(true)}
-        onMouseLeave={() => setShowDescription(false)}
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        onMouseEnter={isMobile ? () => {} : () => setShowDescription(true)}
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        onMouseLeave={isMobile ? () => {} : () => setShowDescription(false)}
         className="flex flex-col items-center justify-center py-6 rounded-lg shadow-lg hover:opacity-20 hover:shadow-black"
       >
         {icon}
