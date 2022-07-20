@@ -5,7 +5,7 @@ import { timelineData } from './timelineData';
 export default function Timeline() {
   return (
     <ol className="max-w-[1240px] mx-auto px-10 items-center sm:flex">
-      {timelineData.reverse().map((timeline) => (
+      {timelineData.map((timeline) => (
         <TimelineCard key={timeline.title} {...timeline} />
       ))}
     </ol>

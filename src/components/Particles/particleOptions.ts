@@ -40,6 +40,7 @@ export const options: ISourceOptions = {
       random: false,
       speed: 1,
       straight: false,
+      bounce: false,
     },
     opacity: {
       value: 1,
