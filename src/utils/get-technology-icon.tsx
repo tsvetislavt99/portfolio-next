@@ -29,7 +29,7 @@ import {
 } from 'react-icons/si';
 
 export const technologyMap = new Map([
-  ['javascript', <SiJavascript key="javascript" size={50} color="#F0DB4F" />],
+  ['javaScript', <SiJavascript key="javascript" size={50} color="#F0DB4F" />],
   ['nodejs', <SiNodedotjs key="nodejs" size={50} color="#3c873a" />],
   ['express', <SiExpress key="express" size={50} />],
   [
@@ -37,7 +37,7 @@ export const technologyMap = new Map([
     <SiJsonwebtokens key="jsonwebtokens" size={50} color="#00e0c6" />,
   ],
   ['react', <SiReact key="react" size={50} color="#61DBFB" />],
-  ['typescript', <SiTypescript key="typescript" size={50} color="#007acc" />],
+  ['typeScript', <SiTypescript key="typescript" size={50} color="#007acc" />],
   ['mongodb', <SiMongodb key="mongodb" size={50} color="#0cd45b" />],
   ['jest', <SiJest key="jest" size={50} color="#C63D14" />],
   ['firebase', <SiFirebase key="firebase" size={50} color="#FFCB2B" />],

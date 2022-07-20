@@ -11,11 +11,11 @@ export default function IndexPage(): JSX.Element {
     <Layout>
       <Hero />
       <SectionBreak />
-      <Timeline />
-      <SectionBreak />
       <Technologies />
       <SectionBreak />
       <Projects />
+      <SectionBreak />
+      <Timeline />
       <SectionBreak />
     </Layout>
   );

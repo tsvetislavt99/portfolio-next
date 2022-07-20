@@ -1,25 +1,41 @@
 import React from 'react';
-import { BiSupport } from 'react-icons/bi';
+import { timelineIconsMap } from 'utils/get-timeline-icon';
 
-export default function TimelineCard() {
+interface TimelineCardProps {
+  title: string;
+  description: string;
+  iconTitle: string;
+  fromTo: string;
+}
+
+export default function TimelineCard({
+  title,
+  description,
+  iconTitle,
+  fromTo,
+}: TimelineCardProps): JSX.Element {
+  const icon = React.useMemo(() => {
+    const icon = timelineIconsMap.get(iconTitle);
+    return icon;
+  }, [iconTitle]);
+
   return (
     <li className="relative mb-6 sm:mb-0">
       <div className="flex items-center">
         <div className="flex z-10 justify-center items-center w-6 h-6 bg-light-secondary rounded-full  shrink-0">
-          <BiSupport />
+          {icon}
         </div>
         <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
       </div>
       <div className="mt-3 sm:pr-8">
         <h3 className="text-dark-primary dark:text-light-primary text-lg font-semibold">
-          Technical Support Specialist
+          {title}
         </h3>
         <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-          December, 2019 - August, 2020
+          {fromTo}
         </time>
         <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-          Provide first level technical support for one of the biggest ISP
-          companies in Bulgaria.
+          {description}
         </p>
       </div>
     </li>
