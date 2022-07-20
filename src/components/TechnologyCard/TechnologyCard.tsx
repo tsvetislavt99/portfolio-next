@@ -21,7 +21,7 @@ export default function TechnologyCard({
   }, [title]);
 
   return (
-    <div className="relative">
+    <div className="relative select-none">
       <p
         className={
           showDescription || showDescriptionMobile
