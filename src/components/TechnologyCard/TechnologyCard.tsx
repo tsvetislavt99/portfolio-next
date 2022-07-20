@@ -35,9 +35,10 @@ export default function TechnologyCard({
         onMouseEnter={isMobile ? () => {} : () => setShowDescription(true)}
         onMouseLeave={isMobile ? () => {} : () => setShowDescription(false)}
         onTouchStart={
-          isMobile ? () => setShowDescriptionMobile(true) : () => {}
+          isMobile
+            ? () => setShowDescriptionMobile((value) => !value)
+            : () => {}
         }
-        onTouchEnd={isMobile ? () => setShowDescriptionMobile(false) : () => {}}
         onTouchCancel={
           isMobile ? () => setShowDescriptionMobile(false) : () => {}
         }
