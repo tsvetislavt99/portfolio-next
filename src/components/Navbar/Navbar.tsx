@@ -20,7 +20,7 @@ export default function Navbar() {
             color="text-dark-primary dark:text-light-primary"
           />
           <span className="ml-3">
-            <Link href="/">t.works</Link>
+            <Link href="#">t.works</Link>
           </span>
         </h1>
         <ul className="sm:flex hidden">
@@ -69,7 +69,7 @@ export default function Navbar() {
                 color="text-dark-primary dark:text-light-primary"
               />
               <span className="ml-3">
-                <Link href="/">t.works</Link>
+                <Link href="#">t.works</Link>
               </span>
             </h1>
             <ul className="pt-8 uppercase">
