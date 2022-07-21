@@ -29,10 +29,10 @@ export default function Navbar() {
             <div className="border-r-2 border-dark-primary dark:border-light-primary pl-5" />
           </li>
           <li className="p-4">
-            <Link href="#technology">Technology</Link>
+            <Link href="#projects">Projects</Link>
           </li>
           <li className="p-4">
-            <Link href="#projects">Projects</Link>
+            <Link href="#technology">Technology</Link>
           </li>
           <li className="p-4">
             <Link href="#timeline">About</Link>
@@ -77,13 +77,13 @@ export default function Navbar() {
                 onClick={handleNav}
                 className="p-4 border-b border-b-gray-900"
               >
-                <Link href="#technology">Technology</Link>
+                <Link href="#projects">Projects</Link>
               </li>
               <li
                 onClick={handleNav}
                 className="p-4 border-b border-b-gray-900"
               >
-                <Link href="#projects">Projects</Link>
+                <Link href="#technology">Technology</Link>
               </li>
               <li
                 onClick={handleNav}
