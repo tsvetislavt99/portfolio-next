@@ -9,8 +9,7 @@ export default function ThemeToggler(): JSX.Element {
   useIsomorphicLayoutEffect(() => {
     if (
       localStorage.getItem('theme') === 'true' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
+      !('theme' in localStorage)
     ) {
       setDarkMode(true);
     }
