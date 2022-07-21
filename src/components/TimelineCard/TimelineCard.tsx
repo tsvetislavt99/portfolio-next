@@ -6,6 +6,7 @@ interface TimelineCardProps {
   description: string;
   iconTitle: string;
   fromTo: string;
+  company: string;
 }
 
 export default function TimelineCard({
@@ -13,6 +14,7 @@ export default function TimelineCard({
   description,
   iconTitle,
   fromTo,
+  company,
 }: TimelineCardProps): JSX.Element {
   const icon = React.useMemo(() => {
     const icon = timelineIconsMap.get(iconTitle);
@@ -20,7 +22,7 @@ export default function TimelineCard({
   }, [iconTitle]);
 
   return (
-    <li className="relative mb-6 sm:mb-0">
+    <li className="relative mb-6 sm:mb-0 flex-1">
       <div className="flex items-center">
         <div className="flex z-10 justify-center items-center w-6 h-6 bg-light-secondary rounded-full  shrink-0">
           {icon}
@@ -31,6 +33,9 @@ export default function TimelineCard({
         <h3 className="text-dark-primary dark:text-light-primary text-lg font-semibold">
           {title}
         </h3>
+        <p className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          {company}
+        </p>
         <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
           {fromTo}
         </time>
