@@ -29,13 +29,13 @@ export default function Navbar() {
             <div className="border-r-2 border-dark-primary dark:border-light-primary pl-5" />
           </li>
           <li className="p-4">
-            <Link href="/">Projects</Link>
+            <Link href="#technology">Technology</Link>
           </li>
           <li className="p-4">
-            <Link href="/">Technology</Link>
+            <Link href="#projects">Projects</Link>
           </li>
           <li className="p-4">
-            <Link href="/">About</Link>
+            <Link href="#timeline">About</Link>
           </li>
         </ul>
         {/** Mobile nav */}
@@ -73,14 +73,23 @@ export default function Navbar() {
               </span>
             </h1>
             <ul className="pt-8 uppercase">
-              <li className="p-4 border-b border-b-gray-900">
-                <Link href="/">Projects</Link>
+              <li
+                onClick={handleNav}
+                className="p-4 border-b border-b-gray-900"
+              >
+                <Link href="#technology">Technology</Link>
               </li>
-              <li className="p-4 border-b border-b-gray-900">
-                <Link href="/catalog">Technology</Link>
+              <li
+                onClick={handleNav}
+                className="p-4 border-b border-b-gray-900"
+              >
+                <Link href="#projects">Projects</Link>
               </li>
-              <li className="p-4 border-b border-b-gray-900">
-                <Link href="/catalog">About</Link>
+              <li
+                onClick={handleNav}
+                className="p-4 border-b border-b-gray-900"
+              >
+                <Link href="#timeline">About</Link>
               </li>
             </ul>
           </div>
