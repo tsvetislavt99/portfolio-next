@@ -5,17 +5,21 @@ import SectionBreak from 'components/SectionBreak';
 import Projects from 'components/Projects';
 import Technologies from 'components/Technologies';
 import Timeline from 'components/Timeline';
+import AboutMe from 'components/AboutMe';
+import Recommendations from 'components/Recommendations';
 
 export default function IndexPage(): JSX.Element {
   return (
     <Layout>
       <Hero />
       <SectionBreak />
-      <Technologies />
-      <SectionBreak />
       <Projects />
       <SectionBreak />
+      <Technologies />
+      <SectionBreak />
+      <AboutMe />
       <Timeline />
+      <Recommendations />
       <SectionBreak />
     </Layout>
   );
