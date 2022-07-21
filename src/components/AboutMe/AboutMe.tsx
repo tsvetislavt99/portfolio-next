@@ -19,7 +19,7 @@ export default function AboutMe() {
               width={200}
             />
           </div>
-          <p>
+          <p className=" max-w-[90%] mx-auto">
             When not writing or reviewing code, I enjoy spending time with my
             family, cooking and going out with freinds. For up-to-date
             information or projects that I currently work on, check my{' '}
