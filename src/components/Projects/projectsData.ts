@@ -2,8 +2,8 @@ export const projectsData = [
   {
     title: '[Comics lib.]: Full-stack e-commerce application',
     imgUrl: '/project-images/comicsLib.png',
-    hasLiveDemo: true,
-    hasSourceCode: true,
+    demoUrl: '',
+    sourceUrl: '',
     technologiesUsed: [
       'TypeScript',
       'React',
@@ -11,14 +11,13 @@ export const projectsData = [
       'NodeJS',
       'Express',
       'MongoDB',
-      'Jest',
     ],
   },
   {
     title: '[ReactiveBlog]: Full-stack blog application',
     imgUrl: '/project-images/reactiveBlog.png',
-    hasLiveDemo: true,
-    hasSourceCode: true,
+    demoUrl: '',
+    sourceUrl: '',
     technologiesUsed: [
       'JavaScript',
       'React',

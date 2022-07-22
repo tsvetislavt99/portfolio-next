@@ -13,13 +13,13 @@ export default function IndexPage(): JSX.Element {
     <Layout>
       <Hero />
       <SectionBreak />
-      <Projects />
-      <SectionBreak />
-      <Technologies />
-      <SectionBreak />
       <AboutMe />
       <Timeline />
       <Recommendations />
+      <SectionBreak />
+      <Projects />
+      <SectionBreak />
+      <Technologies />
       <SectionBreak />
     </Layout>
   );
