@@ -12,9 +12,12 @@ export default function Hero(): JSX.Element {
         </h1>
         <p className="pb-7 opacity-70">Just a cool Web Developer</p>
         <div className="flex flex-row">
-          <button className="px-3 py-1 rounded-full text-light-primary dark:bg-gradient-to-r dark:from-light-accent dark:to-light-secondary bg-black hover:scale-105 transition duration-300">
+          <a
+            href="#timeline"
+            className="px-3 py-1 flex justify-center items-center rounded-full text-light-primary dark:bg-gradient-to-r dark:from-light-accent dark:to-light-secondary bg-black hover:scale-105 transition duration-300"
+          >
             About me
-          </button>
+          </a>
           <div className="h-10 w-1 border-r-2 border-dark-primary dark:border-light-primary pl-5" />
           <SocialSection />
         </div>

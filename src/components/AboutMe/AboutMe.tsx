@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function AboutMe() {
   return (
-    <section className="max-w-[1240px] mx-auto mb-5">
+    <section id="timeline" className="max-w-[1240px] mx-auto mb-5">
       <h1 className="py-5 px-5 sm:px-10 text-2xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-dark-primary to-dark-primary/80 dark:from-light-primary dark:to-light-primary/70">
         About Me
       </h1>
