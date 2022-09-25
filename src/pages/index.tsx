@@ -16,8 +16,8 @@ export default function IndexPage(): JSX.Element {
       <AboutMe />
       <Timeline />
       <Recommendations />
-      <SectionBreak />
-      <Projects />
+      {/* <SectionBreak /> */}
+      {/* <Projects /> */}
       <SectionBreak />
       <Technologies />
       <SectionBreak />
