@@ -8,7 +8,7 @@ export default function AboutMe() {
         About Me
       </h1>
       <div className="flex justify-center">
-        <div className="max-w-[1024px] bg-light-primary dark:bg-dark-primary ">
+        <div className="max-w-[1024px] bg-light-primary dark:bg-dark-primary transition duration-200">
           <div className="flex flex-col items-center pb-10">
             <Image
               className="mb-3 w-24 h-24 border-0 rounded-full shadow-lg"
