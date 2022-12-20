@@ -5,6 +5,8 @@ import { MenuIcon, XIcon, CodeIcon } from '@heroicons/react/solid';
 import OutsideClickHandler from 'react-outside-click-handler';
 import ThemeToggler from 'components/ThemeToggler';
 
+import css from './NavBar.module.css';
+
 export default function Navbar() {
   const [nav, setNav] = useState(false);
   const router = useRouter();
@@ -42,12 +44,12 @@ export default function Navbar() {
             <Link scroll={false} href="#projects">Projects</Link>
           </li> */}
           <li className="p-4">
-            <Link scroll={false} href="/#technology">
+            <Link className={css.navbarItem} scroll={false} href="/#technology">
               Technology
             </Link>
           </li>
           <li className="p-4">
-            <Link scroll={false} href="/#timeline">
+            <Link className={css.navbarItem} scroll={false} href="/#timeline">
               About
             </Link>
           </li>
