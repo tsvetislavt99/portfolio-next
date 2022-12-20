@@ -45,7 +45,7 @@ export default function TechnologyCard({
         className={
           showDescriptionMobile
             ? 'flex flex-col items-center justify-center py-6 rounded-lg shadow-lg opacity-20 shadow-black'
-            : 'flex flex-col items-center justify-center py-6 rounded-lg shadow-lg hover:opacity-20 hover:shadow-black'
+            : ''
         }
       >
         {icon}
