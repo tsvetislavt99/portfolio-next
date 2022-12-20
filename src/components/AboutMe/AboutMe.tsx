@@ -1,5 +1,4 @@
 import SectionHeading from 'components/SectionHeading';
-import Image from 'next/image';
 import React from 'react';
 
 export default function AboutMe() {
@@ -8,21 +7,20 @@ export default function AboutMe() {
       <SectionHeading> About Me</SectionHeading>
 
       <div className="flex justify-center">
-        <div className="max-w-[1024px] bg-light-primary dark:bg-dark-primary transition duration-200">
-          <div className="flex flex-col items-center pb-10">
-            <Image
-              className="mb-3 w-36 h-36 md:w-48 md:h-48 border-0 rounded-full shadow-lg"
-              src="/img/me.jpeg"
-              alt="Tsvetislav image"
-              height={300}
-              width={300}
-              style={{ objectFit: 'contain' }}
-            />
-          </div>
-          <p className=" max-w-[90%] mx-auto">
-            When not writing or reviewing code, I enjoy spending time with my
-            family, cooking and going out with freinds. For up-to-date
-            information or projects that I currently work on, check my{' '}
+        <div className="mx-6 sm:mx-12">
+          <p className="pb-2">
+            As a front-end developer, I specialize in using React and Typescript
+            to create efficient and user-friendly applications. In addition to
+            my technical skills, I am a team player with a dedication to
+            producing high-quality work. I am always seeking ways to improve and
+            stay current in the industry. In my free time, I enjoy gaming and
+            participating in coding challenges to keep my skills sharp. I also
+            love spending time with my family, cooking, and watching tv-series
+            and movies. These activities help me relax and recharge, allowing me
+            to approach my work with a clear mind and fresh perspective. I am
+            committed to delivering the best results for my clients and am eager
+            to take on new challenges. You can check what I am currently up to
+            on my{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-light-accent to-light-secondary ">
               <a
                 target="_blank"
@@ -32,7 +30,11 @@ export default function AboutMe() {
                 GitHub
               </a>
             </span>
-            . You can reach me on{' '}
+            .
+          </p>
+          <p>
+            If you have any questions or would like to work together, feel free
+            to connect with me on{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-light-accent to-light-secondary ">
               tsvetislavt99@gmail.com
             </span>
