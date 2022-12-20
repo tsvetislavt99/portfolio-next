@@ -43,13 +43,13 @@ export default function Navbar() {
             <Link scroll={false} href="#projects">Projects</Link>
           </li> */}
           <li className="p-4">
-            <Link className={css.navbarItem} scroll={false} href="/#technology">
-              Technology
+            <Link className={css.navbarItem} scroll={false} href="/#timeline">
+              About
             </Link>
           </li>
           <li className="p-4">
-            <Link className={css.navbarItem} scroll={false} href="/#timeline">
-              About
+            <Link className={css.navbarItem} scroll={false} href="/#technology">
+              Technology
             </Link>
           </li>
         </ul>
@@ -98,16 +98,16 @@ export default function Navbar() {
                 onClick={handleNav}
                 className="p-4 border-b border-b-gray-900"
               >
-                <Link scroll={false} href="/#technology">
-                  Technology
+                <Link scroll={false} href="/#timeline">
+                  About
                 </Link>
               </li>
               <li
                 onClick={handleNav}
                 className="p-4 border-b border-b-gray-900"
               >
-                <Link scroll={false} href="/#timeline">
-                  About
+                <Link scroll={false} href="/#technology">
+                  Technology
                 </Link>
               </li>
             </ul>
