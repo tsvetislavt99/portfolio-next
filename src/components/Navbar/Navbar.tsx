@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { MenuIcon, XIcon, CodeIcon } from '@heroicons/react/solid';
 import OutsideClickHandler from 'react-outside-click-handler';
 import ThemeToggler from 'components/ThemeToggler';
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
+  const router = useRouter();
 
   const handleNav = () => {
     setNav((nav) => !nav);
   };
+
+  useEffect(() => {
+    // Clear hash from url
+    if (router.asPath.includes('#')) {
+      router.replace(router.asPath.split('#')[0], undefined, { shallow: true });
+    }
+    console.log(router.asPath);
+  }, [router.asPath]);
 
   return (
     <>
@@ -29,13 +39,17 @@ export default function Navbar() {
             <div className="border-r-2 border-dark-primary dark:border-light-primary pl-5" />
           </li>
           {/* <li className="p-4">
-            <Link href="#projects">Projects</Link>
+            <Link scroll={false} href="#projects">Projects</Link>
           </li> */}
           <li className="p-4">
-            <Link href="#technology">Technology</Link>
+            <Link scroll={false} href="/#technology">
+              Technology
+            </Link>
           </li>
           <li className="p-4">
-            <Link href="#timeline">About</Link>
+            <Link scroll={false} href="/#timeline">
+              About
+            </Link>
           </li>
         </ul>
         {/** Mobile nav */}
@@ -77,19 +91,23 @@ export default function Navbar() {
                 onClick={handleNav}
                 className="p-4 border-b border-b-gray-900"
               >
-                <Link href="#projects">Projects</Link>
+                <Link scroll={false} href="#projects">Projects</Link>
               </li> */}
               <li
                 onClick={handleNav}
                 className="p-4 border-b border-b-gray-900"
               >
-                <Link href="#technology">Technology</Link>
+                <Link scroll={false} href="/#technology">
+                  Technology
+                </Link>
               </li>
               <li
                 onClick={handleNav}
                 className="p-4 border-b border-b-gray-900"
               >
-                <Link href="#timeline">About</Link>
+                <Link scroll={false} href="/#timeline">
+                  About
+                </Link>
               </li>
             </ul>
           </div>
