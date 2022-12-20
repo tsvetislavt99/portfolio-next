@@ -1,22 +1,22 @@
+import SectionHeading from 'components/SectionHeading';
 import Image from 'next/image';
 import React from 'react';
 
 export default function AboutMe() {
   return (
     <section id="timeline" className="max-w-[1240px] mx-auto mb-5">
-      <h1 className="py-5 px-5 sm:px-10 text-2xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-dark-primary to-dark-primary/80 dark:from-light-primary dark:to-light-primary/70">
-        About Me
-      </h1>
+      <SectionHeading> About Me</SectionHeading>
+
       <div className="flex justify-center">
         <div className="max-w-[1024px] bg-light-primary dark:bg-dark-primary transition duration-200">
           <div className="flex flex-col items-center pb-10">
             <Image
-              className="mb-3 w-24 h-24 border-0 rounded-full shadow-lg"
+              className="mb-3 w-36 h-36 md:w-48 md:h-48 border-0 rounded-full shadow-lg"
               src="/img/me.jpeg"
               alt="Tsvetislav image"
-              objectFit="contain"
-              height={200}
-              width={200}
+              height={300}
+              width={300}
+              style={{ objectFit: 'contain' }}
             />
           </div>
           <p className=" max-w-[90%] mx-auto">

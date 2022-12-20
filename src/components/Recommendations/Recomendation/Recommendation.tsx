@@ -20,7 +20,7 @@ export default function Recommendation({
   linkToProfile,
 }: RecomendationProps): JSX.Element {
   return (
-    <article className="max-w-[90%] mx-auto sm:max-w-[45%]">
+    <article className="max-w-[85%] mx-auto xl:max-w-[100%]">
       <div className="flex items-center mb-4 space-x-4">
         <a href={linkToProfile} target="_blank" rel="noopener noreferrer">
           <Image
