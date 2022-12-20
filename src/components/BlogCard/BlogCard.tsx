@@ -10,18 +10,32 @@ interface BlogCardProps {
   title: string;
   summary: string;
   href: string;
+  img: string;
 }
 
 export default function BlogCard({
   type,
   updatedDate,
   title,
+  img,
   summary,
   href,
 }: BlogCardProps) {
   return (
     <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-      <div className="flex justify-between items-center mb-5 text-gray-500">
+      <Link href={href}>
+        <div className="mx-auto mb-5 h-44 w-full rounded-lg relative z-20 overflow-hidden">
+          <Image
+            className="mx-auto mb-5 h-44 w-full rounded-lg relative transform transition duration-500 hover:scale-105"
+            style={{ objectFit: 'cover' }}
+            src={img}
+            width={400}
+            height={175}
+            alt="Man developing website on desk Illustration by WOOBRO LTD"
+          />
+        </div>
+      </Link>
+      <div className="flex justify-between items-center mb-2 text-gray-500">
         <span className="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
           <svg
             className="mr-1 w-3 h-3"
@@ -46,39 +60,14 @@ export default function BlogCard({
           </svg>
           {type}
         </span>
-        <span className="text-sm">{formatDistanceToNow(updatedDate)}</span>
+        <span className="text-sm">{formatDistanceToNow(updatedDate)} ago</span>
       </div>
-      <Image
-        src="/blog/man-developing-website-on-desk.svg"
-        width={100}
-        height={100}
-        alt="Man developing website on desk Illustration by WOOBRO LTD"
-      />
       <h2 className="mb-2 hover:underline text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         <Link href={href}>{title}</Link>
       </h2>
-      <p className="mb-5 font-light text-gray-500 dark:text-gray-400">
+      <p className="font-light text-gray-500 dark:text-gray-400">
         {formatSummary(summary)}
       </p>
-      <div className="flex justify-between items-center">
-        <Link href={href}>
-          <div className="cursor-pointer inline-flex items-center font-medium text-primary-600 dark:text-primary-500">
-            <span className="hover:underline">Read more</span>
-            <svg
-              className="ml-2 w-4 h-4"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </div>
-        </Link>
-      </div>
     </article>
   );
 }
