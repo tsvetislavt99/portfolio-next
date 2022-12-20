@@ -2,3 +2,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.activeSpan {
+  background: linear-gradient(
+    90deg,
+    hsla(180, 100%, 29%, 1) 0%,
+    hsla(173, 100%, 44%, 1) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  clip-path: inset(1px);
+  transition: all 0.5s;
+}
+
+.activeSpanNeighbourPrev {
+  color: #009393;
+  transition: all 0.5s;
+}
+
+.activeSpanNeighbourNext {
+  color: #00e0c6;
+  transition: all 0.5s;
+}
