@@ -15,6 +15,10 @@ export default function TechnologyCard({
   const [showDescription, setShowDescription] = React.useState(false);
   const [showDescriptionMobile, setShowDescriptionMobile] =
     React.useState(false);
+  const mobileOpacity = showDescriptionMobile ? 'opacity-20' : 'opacity-0';
+  const mobileShadow = showDescriptionMobile ? 'shadow-black' : 'shadow-none';
+  const desktopOpacity = isMobile ? 'hover:opacity-20' : '';
+  const desktopShadow = isMobile ? 'hover:shadow-black' : '';
   const icon = React.useMemo(() => {
     const icon = technologyMap.get(title);
     return icon;
@@ -44,7 +48,9 @@ export default function TechnologyCard({
         }
         className={
           showDescriptionMobile
-            ? 'flex flex-col items-center justify-center py-6 rounded-lg shadow-lg md:opacity-20 md:shadow-black'
+            ? 'flex flex-col items-center justify-center py-6 rounded-lg shadow-lg opacity-20 shadow-black'
+            : isMobile
+            ? 'flex flex-col items-center justify-center py-6 rounded-lg shadow-lg'
             : 'flex flex-col items-center justify-center py-6 rounded-lg shadow-lg hover:opacity-20 hover:shadow-black'
         }
       >
