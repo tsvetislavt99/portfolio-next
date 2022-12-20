@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { formatSummary } from 'utils/format-summary';
 import { formatDistanceToNow } from 'date-fns';
+import Image from 'next/image';
 
 interface BlogCardProps {
   type: 'Tutorial' | 'Article' | 'Project';
@@ -19,8 +19,6 @@ export default function BlogCard({
   summary,
   href,
 }: BlogCardProps) {
-  const router = useRouter();
-
   return (
     <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <div className="flex justify-between items-center mb-5 text-gray-500">
@@ -50,6 +48,11 @@ export default function BlogCard({
         </span>
         <span className="text-sm">{formatDistanceToNow(updatedDate)}</span>
       </div>
+      <Image
+        src="/blog/man-developing-website-on-desk.svg"
+        width={100}
+        height={100}
+      />
       <h2 className="mb-2 hover:underline text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         <Link href={href}>{title}</Link>
       </h2>

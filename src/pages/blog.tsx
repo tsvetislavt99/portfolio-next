@@ -5,7 +5,7 @@ export default function Blog() {
   return (
     <section className="bg-primary dark:bg-primary">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <BlogCard
             type="Article"
             title="How to use Next.js with TypeScript"

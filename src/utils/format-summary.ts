@@ -1,4 +1,4 @@
-const SUMMARY_MAX_LENGTH = 257;
+const SUMMARY_MAX_LENGTH = 132;
 /**
  * @function formatSummary
  * @param {string} summary The summary of the article
