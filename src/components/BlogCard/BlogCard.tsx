@@ -52,6 +52,7 @@ export default function BlogCard({
         src="/blog/man-developing-website-on-desk.svg"
         width={100}
         height={100}
+        alt="Man developing website on desk Illustration by WOOBRO LTD"
       />
       <h2 className="mb-2 hover:underline text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         <Link href={href}>{title}</Link>
