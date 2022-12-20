@@ -8,8 +8,8 @@ export default function Hero(): JSX.Element {
   return (
     <div className="relative flex my-10 mx-auto max-w-[1240px] min-h-[300px]">
       <ParticlesContainer />
-      <div className="px-5 sm:px-10 absolute flex flex-row justify-center w-full mt-8 items-center top-0 left-0 z-1 select-none">
-        <div className="mr-10 mt-4">
+      <div className="px-5 sm:px-10 absolute flex flex-col sm:flex-row justify-center w-full sm:mt-8 items-center top-0 left-0 z-1 select-none">
+        <div className="sm:mr-10 sm:mt-4">
           <Image
             className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 border-2 border-dark-primary dark:border-light-primary rounded-full shadow-lg"
             src="/img/me.jpeg"
