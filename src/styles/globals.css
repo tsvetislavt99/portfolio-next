@@ -9,11 +9,13 @@
     hsla(180, 100%, 29%, 1) 0%,
     hsla(173, 100%, 44%, 1) 100%
   );
+  animation: tilt-shaking 0.5s linear;
 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   clip-path: inset(1px);
+  -webkit-clip-path: inset(1px);
   transition: all 0.5s;
 }
 
@@ -25,4 +27,22 @@
 .activeSpanNeighbourNext {
   color: #00e0c6;
   transition: all 0.5s;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
