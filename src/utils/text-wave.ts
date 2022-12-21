@@ -6,8 +6,6 @@ export const onMouseMoveHandler = (e: any) => {
   // Get the next and previous siblings of the current target
   const nextSibling = target.nextSibling;
   const previousSibling = target.previousSibling;
-  console.log(nextSibling);
-  console.log(previousSibling);
 
   if (target instanceof HTMLSpanElement) {
     target.classList.add('activeSpan');

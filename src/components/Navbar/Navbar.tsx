@@ -20,7 +20,6 @@ export default function Navbar() {
     if (router.asPath.includes('#')) {
       router.replace(router.asPath.split('#')[0], undefined, { shallow: true });
     }
-    console.log(router.asPath);
   }, [router.asPath]);
 
   return (
