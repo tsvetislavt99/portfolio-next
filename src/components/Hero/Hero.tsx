@@ -11,7 +11,7 @@ export default function Hero(): JSX.Element {
       <div className="px-5 sm:px-10 absolute flex flex-col sm:flex-row justify-center w-full sm:mt-8 items-center top-0 left-0 z-1 select-none">
         <div className="sm:mr-10 sm:mt-4">
           <Image
-            className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 border-2 border-dark-primary dark:border-light-primary rounded-full shadow-lg"
+            className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 mb-5 sm:mb-0 border-2 border-dark-primary dark:border-light-primary rounded-full shadow-lg"
             src="/img/me.jpeg"
             alt="Tsvetislav image"
             height={300}
@@ -19,7 +19,7 @@ export default function Hero(): JSX.Element {
             style={{ objectFit: 'contain' }}
           />
         </div>
-        <div>
+        <div className="flex flex-col  items-center sm:items-start">
           <HeroHeading />
           <p className="pb-7 opacity-70">Just a cool Web Developer</p>
           <div className="flex flex-row">
