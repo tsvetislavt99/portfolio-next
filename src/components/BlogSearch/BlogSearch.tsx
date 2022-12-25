@@ -8,7 +8,7 @@ export default function BlogSearch() {
           <input
             type="search"
             id="search-dropdown"
-            className="block w-full p-2.5 z-20 text-sm text-gray-900 bg-gray-50 rounded-lg  border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+            className="block w-full p-2.5 z-20 text-sm text-gray-900 bg-gray-50 rounded-lg outline-0 border border-gray-300 focus:ring-light-accent focus:border-light-accent dark:bg-gray-700 dark:border-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:border-light-secondary transtion-all duration-300"
             placeholder="Search Articles, Tutorials..."
             required
           />
