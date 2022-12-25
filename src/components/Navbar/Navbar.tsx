@@ -43,6 +43,11 @@ export default function Navbar() {
             <Link scroll={false} href="#projects">Projects</Link>
           </li> */}
           <li className="p-4">
+            <Link className={css.navbarItem} scroll={false} href="/blog">
+              Blog
+            </Link>
+          </li>
+          <li className="p-4">
             <Link className={css.navbarItem} scroll={false} href="/#timeline">
               About
             </Link>
@@ -94,6 +99,14 @@ export default function Navbar() {
               >
                 <Link scroll={false} href="#projects">Projects</Link>
               </li> */}
+              <li
+                onClick={handleNav}
+                className="p-4 border-b border-b-gray-900"
+              >
+                <Link scroll={false} href="/blog">
+                  Blog
+                </Link>
+              </li>
               <li
                 onClick={handleNav}
                 className="p-4 border-b border-b-gray-900"

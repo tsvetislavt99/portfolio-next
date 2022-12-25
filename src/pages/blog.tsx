@@ -1,10 +1,15 @@
 import BlogCard from 'components/BlogCard';
+import BlogHero from 'components/BlogHero';
+import ParticlesContainer from 'components/Particles';
+import SecitonBreak from 'components/SectionBreak/SecitonBreak';
 import React from 'react';
 
 export default function Blog() {
   return (
-    <section className="bg-primary dark:bg-primary">
-      <div className="py-8 px-8 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <>
+      <section className="bg-primary dark:bg-primary py-8 px-8 mx-auto max-w-[1240px]">
+        <ParticlesContainer className=" -z-10 absolute left-0 right-0 top-32  w-full h-[200vh] lg:h-[150vh]" />
+        <BlogHero />
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <BlogCard
             type="Article"
@@ -55,7 +60,8 @@ export default function Blog() {
             href="/blog/how-to-use-nextjs-with-typescript-3"
           />
         </div>
-      </div>
-    </section>
+      </section>
+      <SecitonBreak />
+    </>
   );
 }
