@@ -14,7 +14,7 @@ export default function BlogSearch() {
           />
           <button
             type="submit"
-            className="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-light-accent rounded-r-lg border border-light-accent hover:bg-light-secondary focus:ring-4 focus:outline-none focus:ring-light-secondary dark:bg-light-secondary dark:hover:bg-light-accent dark:focus:ring-light-secondary"
+            className="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-light-accent rounded-r-lg border border-light-accent hover:bg-light-secondary focus:ring-4 focus:outline-none focus:ring-light-secondary dark:bg-light-secondary dark:hover:bg-light-accent dark:focus:ring-light-secondary transtion-all duration-300"
           >
             <svg
               aria-hidden="true"
