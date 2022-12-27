@@ -5,7 +5,6 @@ import matter from 'gray-matter';
 import Article from 'components/Article';
 import SectionBreak from 'components/SectionBreak';
 import { remark } from 'remark';
-import html from 'remark-html';
 
 // TODO: Continue from here
 export function getAllPostIds() {
@@ -40,9 +39,7 @@ export async function getPostData(post) {
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
+  const processedContent = await remark().process(matterResult.content);
   const contentHtml = processedContent.toString();
 
   // Combine the data with the id and contentHtml
