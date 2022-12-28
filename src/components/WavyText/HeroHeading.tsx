@@ -1,17 +1,31 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import React from 'react';
+import React, { ElementType } from 'react';
 import { isMobile } from 'react-device-detect';
 import { onMouseLeaveHandler, onMouseMoveHandler } from 'utils/text-wave';
 
 const NAME = 'Tsvetislav Todorov';
 
-export default function HeroHeading() {
+interface WavyTextProps {
+  text?: string;
+  className?: string;
+  as?: ElementType;
+}
+
+export default function WavyText({
+  text = NAME,
+  className,
+  as: Tag = 'h1',
+}: WavyTextProps) {
   return (
-    <h1
+    <Tag
       onMouseMove={isMobile ? () => {} : onMouseMoveHandler}
-      className="pb-5 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-dark-primary to-dark-primary/80 dark:from-light-primary dark:to-light-primary/70"
+      className={
+        className
+          ? className
+          : 'pb-5 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-dark-primary to-dark-primary/80 dark:from-light-primary dark:to-light-primary/70'
+      }
     >
-      {NAME.split('').map((letter, index) =>
+      {text.split('').map((letter, index) =>
         letter === ' ' ? (
           ' '
         ) : (
@@ -24,6 +38,6 @@ export default function HeroHeading() {
           </span>
         ),
       )}
-    </h1>
+    </Tag>
   );
 }

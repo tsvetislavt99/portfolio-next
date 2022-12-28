@@ -2,7 +2,7 @@ import ParticlesContainer from 'components/Particles';
 import SocialSection from 'components/SocialSection';
 import Image from 'next/image';
 import React from 'react';
-import HeroHeading from './HeroHeading';
+import HeroHeading from 'components/WavyText';
 
 export default function Hero(): JSX.Element {
   return (

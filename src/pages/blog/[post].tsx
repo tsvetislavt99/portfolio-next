@@ -1,24 +1,18 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+
 import Article from 'components/Article';
 import SectionBreak from 'components/SectionBreak';
-import { remark } from 'remark';
 
-// TODO: Continue from here
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(
-    '/Users/tsvetislavtodorov/Projects/portfolio-next/src/articles',
-  );
+import { getAllPostIds, getPostData } from 'utils/posts-helpers';
 
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        post: fileName.replace(/\.md$/, ''),
-      },
-    };
-  });
+interface PostProps {
+  postData: {
+    post: string;
+    title: string;
+    image: string;
+    parsedContent: string;
+    updatedAt: string;
+  };
 }
 
 export async function getStaticPaths() {
@@ -26,27 +20,6 @@ export async function getStaticPaths() {
   return {
     paths,
     fallback: false,
-  };
-}
-
-export async function getPostData(post) {
-  const fullPath = path.join(
-    '/Users/tsvetislavtodorov/Projects/portfolio-next/src/articles/',
-    `${post}.md`,
-  );
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
-
-  const processedContent = await remark().process(matterResult.content);
-  const contentHtml = processedContent.toString();
-
-  // Combine the data with the id and contentHtml
-  return {
-    post,
-    contentHtml,
-    ...matterResult.data,
   };
 }
 
@@ -59,15 +32,15 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const Post = ({ postData }: any) => {
+const Post = ({ postData }: PostProps) => {
   console.log(postData);
   return (
     <>
       <Article
-        title="An awesome heading wow"
+        title={postData.title}
         image="blog/api-configuration.png"
-        content={postData.contentHtml}
-        updatedDate={new Date()}
+        content={postData.parsedContent}
+        updatedDate={new Date(postData.updatedAt)}
       />
       <SectionBreak />
     </>
