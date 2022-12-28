@@ -63,7 +63,7 @@ export default function BlogCard({
             {formatDistanceToNow(updatedDate)} ago
           </span>
         </div>
-        <h2 className="mb-2 hover:underline text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h2 className="mb-2 hover:underline text-2xl font-bold tracking-tight text-dark-primary dark:text-light-primary">
           {title}
         </h2>
         <p className="font-light text-gray-500 dark:text-gray-400">

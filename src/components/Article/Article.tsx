@@ -31,8 +31,8 @@ export default function Article({ title, updatedDate, content }: ArticleProps) {
         rehypePlugins={[rehypeRaw]}
         components={{
           pre: Pre,
-          code({ inline, className = 'blog-code', children, ...props }) {
-            const match = /language-(\w+)/.exec(className || '');
+          code({ inline, children, ...props }) {
+            const match = /language-(\w+)/.exec('');
             return !inline && match ? (
               <SyntaxHighlighter
                 style={a11yDark}
@@ -43,9 +43,7 @@ export default function Article({ title, updatedDate, content }: ArticleProps) {
                 {String(children).replace(/\n$/, '')}
               </SyntaxHighlighter>
             ) : (
-              <code className={className} {...props}>
-                {children}
-              </code>
+              <code {...props}>{children}</code>
             );
           },
         }}

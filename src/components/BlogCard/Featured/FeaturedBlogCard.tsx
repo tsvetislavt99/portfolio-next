@@ -89,7 +89,7 @@ export default function FeaturedBlogCard({
           </div>
         </div>
         <div className="flex md:flex-1 flex-col">
-          <h2 className="mb-2 hover:underline text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="mb-2 hover:underline text-2xl font-bold tracking-tight text-dark-primary dark:text-light-primary">
             {title}
           </h2>
           <p className="font-light text-gray-500 dark:text-gray-400">
