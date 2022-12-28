@@ -8,7 +8,7 @@ interface CodeCopyBtnProps {
 export default function CodeCopyBtn({ children }: CodeCopyBtnProps) {
   const [copyOk, setCopyOk] = React.useState(false);
 
-  const iconColor = copyOk ? '#00e0c6' : '';
+  const iconColor = copyOk ? '#00e0c6' : '#F1F7ED';
   const Icon = copyOk ? FaCheckSquare : FaCopy;
 
   const handleClick = () => {
