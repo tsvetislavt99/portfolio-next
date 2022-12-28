@@ -16,6 +16,7 @@ export default function WavyText({
   className,
   as: Tag = 'h1',
 }: WavyTextProps) {
+  const words = text.split(' ');
   return (
     <Tag
       onMouseMove={isMobile ? () => {} : onMouseMoveHandler}
@@ -25,19 +26,21 @@ export default function WavyText({
           : 'pb-5 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-dark-primary to-dark-primary/80 dark:from-light-primary dark:to-light-primary/70'
       }
     >
-      {text.split('').map((letter, index) =>
-        letter === ' ' ? (
-          ' '
-        ) : (
-          <span
-            key={index}
-            className="inline-block"
-            onMouseLeave={isMobile ? () => {} : onMouseLeaveHandler}
-          >
-            {letter}
-          </span>
-        ),
-      )}
+      {words.map((word, index) => (
+        <React.Fragment key={word + index}>
+          <span className=" whitespace-nowrap">
+            {word.split('').map((letter, index) => (
+              <span
+                key={index + letter + word}
+                className="inline-block"
+                onMouseLeave={isMobile ? () => {} : onMouseLeaveHandler}
+              >
+                {letter}
+              </span>
+            ))}
+          </span>{' '}
+        </React.Fragment>
+      ))}
     </Tag>
   );
 }

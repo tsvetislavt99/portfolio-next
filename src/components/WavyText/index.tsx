@@ -1,1 +1,1 @@
-export { default } from './HeroHeading';
+export { default } from './WavyText';

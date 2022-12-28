@@ -7,7 +7,10 @@ export const onMouseMoveHandler = (e: any) => {
   const nextSibling = target.nextSibling;
   const previousSibling = target.previousSibling;
 
-  if (target instanceof HTMLSpanElement) {
+  if (
+    target instanceof HTMLSpanElement &&
+    target.classList.contains('inline-block')
+  ) {
     target.classList.add('activeSpan');
   }
   if (nextSibling instanceof HTMLSpanElement) {
