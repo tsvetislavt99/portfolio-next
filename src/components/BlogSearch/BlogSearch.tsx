@@ -8,13 +8,13 @@ export default function BlogSearch() {
           <input
             type="search"
             id="search-dropdown"
-            className="block w-full p-2.5 z-20 text-sm text-gray-900 bg-gray-50 rounded-lg outline-0 border border-gray-300 focus:ring-light-accent focus:border-light-accent dark:bg-gray-700 dark:border-gray-700  dark:placeholder-gray-400 dark:text-white dark:focus:border-light-secondary transtion-all duration-300"
+            className="block w-full p-2.5 z-20 text-sm text-gray-900 bg-gray-50 rounded-lg outline-0 border border-gray-300 focus:ring-light-accent focus:border-light-accent dark:bg-gray-700 dark:border-gray-700  dark:placeholder-gray-400 dark:text-light-primary dark:focus:border-light-secondary transtion-all duration-300"
             placeholder="Search Articles, Tutorials..."
             required
           />
           <button
             type="submit"
-            className="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-light-accent rounded-r-lg border border-light-accent hover:bg-light-secondary focus:ring-4 focus:outline-none focus:ring-light-secondary dark:bg-light-secondary dark:hover:bg-light-accent dark:focus:ring-light-secondary transtion-all duration-300"
+            className="absolute top-0 right-0 p-2.5 text-sm font-medium text-light-primary bg-light-accent rounded-r-lg border border-light-accent hover:bg-light-secondary focus:ring-4 focus:outline-none focus:ring-light-secondary dark:bg-light-secondary dark:hover:bg-light-accent dark:focus:ring-light-secondary transtion-all duration-300"
           >
             <svg
               aria-hidden="true"

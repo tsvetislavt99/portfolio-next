@@ -19,7 +19,7 @@ export default function ProjectCard({
 }: ProjectCardProps): JSX.Element {
   return (
     <div className="flex flex-col basis-1/2 w-full md:max-w-[43%] justify-between xs:mr-2 rounded-2xl mb-10">
-      <h1 className="m-2 text-xl sm:text-2xl md:text-3xl font-bold dark:text-white">
+      <h1 className="m-2 text-xl sm:text-2xl md:text-3xl font-bold dark:text-light-primary">
         {title}
       </h1>
 
@@ -33,7 +33,7 @@ export default function ProjectCard({
               className="flex flex-row items-center m-2"
             >
               {icon}
-              <h1 className="pl-1 text-xs xs:text-base dark:text-white">
+              <h1 className="pl-1 text-xs xs:text-base dark:text-light-primary">
                 {technology}
               </h1>
             </div>

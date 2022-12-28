@@ -32,9 +32,9 @@ export default function ThemeToggler(): JSX.Element {
   return (
     <div className=" cursor-pointer" onClick={() => onToggle()}>
       {darkMode ? (
-        <MoonIcon className="w-6 h-6 text-[#fff] hover:scale-110 transition duration-500" />
+        <MoonIcon className="w-6 h-6 text-light-primary hover:scale-110 transition duration-500" />
       ) : (
-        <SunIcon className="w-6 h-6 text-[#0F1624] hover:scale-110 transition duration-500" />
+        <SunIcon className="w-6 h-6 text-dark-primary hover:scale-110 transition duration-500" />
       )}
     </div>
   );

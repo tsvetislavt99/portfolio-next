@@ -31,7 +31,7 @@ export default function Recommendation({
             alt={name + ' photo'}
           />
         </a>
-        <div className="space-y-1 font-medium dark:text-white">
+        <div className="space-y-1 font-medium">
           <div>
             <a
               className="hover:underline"

@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <>
       <div className="flex flex-nowrap justify-between items-center max-w-[1240px] mx-auto px-4 h-24 text-dark-primary dark:text-light-primary">
-        <h1 className="flex w-content text-2xl font-extrabold text-dark uppercase select-none">
+        <h1 className="flex w-content text-2xl font-extrabold text-dark-primary dark:text-light-primary uppercase select-none">
           <CodeIcon
             className="h-8 w-8"
             color="text-dark-primary dark:text-light-primary"
@@ -60,7 +60,7 @@ export default function Navbar() {
         </ul>
         {/** Mobile nav */}
         <div className="flex flex-row flex-nowrap sm:hidden">
-          <div className="text-white block mr-2 sm:hidden">
+          <div className="block mr-2 sm:hidden">
             <ThemeToggler />
           </div>
           <div onClick={handleNav} className="block sm:hidden">
@@ -83,7 +83,7 @@ export default function Navbar() {
                 : 'fixed left-[-100%] top-0 w-[60%] border-r border-r-gray-900 h-full bg-light-primary dark:bg-dark-primary ease-out duration-1000 z-20'
             }
           >
-            <h1 className="flex flex-row items-center my-5 mx-3 w-full text-2xl font-extrabold text-dark uppercase">
+            <h1 className="flex flex-row items-center my-5 mx-3 w-full text-2xl font-extrabold text-dark-primary uppercase">
               <CodeIcon
                 className="h-8 w-8"
                 color="text-dark-primary dark:text-light-primary"
