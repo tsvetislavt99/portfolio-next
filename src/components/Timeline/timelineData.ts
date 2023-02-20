@@ -1,17 +1,25 @@
 export const timelineData = [
   {
+    title: 'Software Engineer',
+    company: 'Mentormate',
+    description:
+      'Implement Front-End logic that defines the behavior of the visual elements of a web application.',
+    iconTitle: 'development',
+    fromTo: 'December 2022 - Present',
+  },
+  {
     title: 'Junior Software Developer',
     company: 'Mentormate',
     description:
-      'Implement Front-End logic that defines the behavior of the visual elements of a web application. Also responsible for connecting the Front-End part with the services that reside on the Back-End.',
+      'Implement Front-End logic that defines the behavior of the visual elements of a web application.',
     iconTitle: 'development',
-    fromTo: 'April 2022 - Present',
+    fromTo: 'April 2022 - December 2022',
   },
   {
     title: 'Technical Support Shift Manager',
     company: 'Draftkings',
     description:
-      'Develop automation, tools, and other process efficiencies. Debugging, tracking and escalating complex issues and technical incidents. Monitor and assist with day-to-day operations of the whole team.',
+      'Develop automation, tools, and other process efficiencies. Monitor and assist with day-to-day operations of the whole team.',
     iconTitle: 'technical',
     fromTo: 'November 2021 - April 2022',
   },

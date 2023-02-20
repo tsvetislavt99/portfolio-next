@@ -27,7 +27,7 @@ export default function TimelineCard({
         <div className="flex z-10 justify-center items-center w-6 h-6 bg-light-secondary rounded-full  shrink-0">
           {icon}
         </div>
-        <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+        <div className="hidden lg:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
       </div>
       <div className="mt-3 sm:pr-8">
         <h3 className="text-dark-primary dark:text-light-primary text-lg font-semibold">
@@ -42,6 +42,7 @@ export default function TimelineCard({
         <p className="text-base font-normal text-gray-500 dark:text-gray-400">
           {description}
         </p>
+        <div className="my-5 lg:hidden max-lg:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
       </div>
     </li>
   );
