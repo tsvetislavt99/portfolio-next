@@ -25,7 +25,7 @@ export default function Hero(): JSX.Element {
           <div className="flex flex-row">
             <a
               href="#timeline"
-              className="px-3 py-1 flex justify-center items-center rounded-full text-light-primary dark:bg-gradient-to-r dark:from-light-accent dark:to-light-secondary bg-black hover:scale-105 transition duration-300"
+              className="px-3 py-1 flex justify-center items-center rounded-full text-light-primary dark:bg-gradient-to-r dark:from-light-accent dark:to-[#964e03] bg-black hover:scale-105 transition duration-300"
             >
               About me
             </a>

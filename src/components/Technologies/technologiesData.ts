@@ -33,15 +33,15 @@ export const technologiesData = [
   },
   {
     title: 'react',
-    description: 'Framework created by an evil corporation',
+    description: 'Obviously pt3',
   },
   {
     title: 'redux',
-    description: 'Get it from the store, use it anywhere',
+    description: 'State management',
   },
   {
     title: 'next.js',
-    description: 'Because preparing for prod is hard',
+    description: 'SSR is the new black',
   },
   {
     title: 'express',
@@ -61,15 +61,15 @@ export const technologiesData = [
   },
   {
     title: 'firebase',
-    description: 'BaaS created by an evil corporation',
+    description: 'Google made it, so it must be good',
   },
   {
     title: 'Auth0',
-    description: 'Authentication made easy',
+    description: 'I swore I would never write my own auth again',
   },
   {
     title: 'heroku',
-    description: 'Deploy your app to the cloud',
+    description: 'The free way to deploy your app. JK it costs money now',
   },
   {
     title: 'Babel',
@@ -85,14 +85,14 @@ export const technologiesData = [
   },
   {
     title: 'Jira',
-    description: 'The way to track bugs',
+    description: 'Keeping track pt.2',
   },
   {
     title: 'Confluence',
-    description: 'Documentation. Someone has to write it',
+    description: "Atlassian's wiki",
   },
   {
     title: 'Slack',
-    description: 'Communication is key',
+    description: 'Discord for work',
   },
 ];

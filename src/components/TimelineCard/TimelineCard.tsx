@@ -3,15 +3,15 @@ import { timelineIconsMap } from 'utils/get-timeline-icon';
 
 interface TimelineCardProps {
   title: string;
-  description: string;
+  description?: string;
   iconTitle: string;
   fromTo: string;
   company: string;
 }
 
+// TODO: Add description in the data file and render it here
 export default function TimelineCard({
   title,
-  description,
   iconTitle,
   fromTo,
   company,
@@ -24,7 +24,7 @@ export default function TimelineCard({
   return (
     <li className="relative mb-6 sm:mb-0 flex-1">
       <div className="flex items-center">
-        <div className="flex z-10 justify-center items-center w-6 h-6 bg-light-secondary rounded-full  shrink-0">
+        <div className="flex z-10 justify-center items-center w-6 h-6 bg-black rounded-full shrink-0 hover:scale-125 transition duration-300 cursor-pointer">
           {icon}
         </div>
         <div className="hidden lg:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -39,9 +39,6 @@ export default function TimelineCard({
         <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
           {fromTo}
         </time>
-        <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-          {description}
-        </p>
         <div className="my-5 lg:hidden max-lg:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
       </div>
     </li>

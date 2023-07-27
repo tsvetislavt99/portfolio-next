@@ -30,7 +30,7 @@ export default function ThemeToggler(): JSX.Element {
   };
 
   return (
-    <div onClick={() => onToggle()}>
+    <div className="cursor-pointer" onClick={() => onToggle()}>
       {darkMode ? (
         <MoonIcon className="w-6 h-6 text-[#fff] hover:scale-110 transition duration-500" />
       ) : (

@@ -6,8 +6,8 @@
 .activeSpan {
   background: linear-gradient(
     90deg,
-    hsla(180, 100%, 29%, 1) 0%,
-    hsla(173, 100%, 44%, 1) 100%
+    hsl(98, 47%, 57%) 0%,
+    hsl(98, 47%, 50%) 100%
   );
   animation: tilt-shaking 0.5s linear;
 
@@ -20,12 +20,12 @@
 }
 
 .activeSpanNeighbourPrev {
-  color: #009393;
+  color: hsl(99, 47%, 63%);
   transition: all 0.5s;
 }
 
 .activeSpanNeighbourNext {
-  color: #00e0c6;
+  color: hsl(98, 47%, 43%);
   transition: all 0.5s;
 }
 

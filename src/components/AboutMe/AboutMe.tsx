@@ -9,35 +9,32 @@ export default function AboutMe() {
       <div className="flex justify-center">
         <div className="mx-6 sm:mx-12">
           <p className="pb-2">
-            As a front-end developer, I specialize in using React and Typescript
-            to create efficient and user-friendly applications. In addition to
-            my technical skills, I am a team player with a dedication to
-            producing high-quality work. I am always seeking ways to improve and
-            stay current in the industry. In my free time, I enjoy gaming and
-            participating in coding challenges to keep my skills sharp. I also
-            love spending time with my family, cooking, and watching tv-series
-            and movies. These activities help me relax and recharge, allowing me
-            to approach my work with a clear mind and fresh perspective. I am
-            committed to delivering the best results for my clients and am eager
-            to take on new challenges. You can check what I am currently up to
-            on my{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-light-accent to-light-secondary ">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/tsvetislavt99"
-              >
-                GitHub
-              </a>
-            </span>
-            .
+            Greetings! I{"'"}m Tsvetislav, a seasoned Software Engineer
+            specializing in JavaScript, TypeScript, React, Node.js, and Express.
+            With my proficiency in these technologies, I take pride in building
+            great quality applications that seamlessly integrate creativity and
+            functionality.
+          </p>
+          <p className="pb-2">
+            My journey in software development began with a curiosity for
+            tinkering with computers, and it has since evolved into a fulfilling
+            career.
+          </p>
+          <p className="pb-2">
+            Beyond coding, I really enjoy helping new and upcoming developers
+            and IT people. I remember the struggles I faced early in my career,
+            and that{"'"}s why I{"'"}m always ready to lend a hand, whether it
+            {"'"}s solving a complex technical problem or providing guidance on
+            career choices.
           </p>
           <p>
-            If you have any questions or would like to work together, feel free
-            to connect with me on{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-light-accent to-light-secondary ">
+            If you share the same enthusiasm for coding or have any questions, I
+            {"'"}d be more than happy to connect with you. Feel free to drop me
+            a line at{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6AB341] to-[#bcdfa8] ">
               tsvetislavt99@gmail.com
             </span>
+            .
           </p>
         </div>
       </div>

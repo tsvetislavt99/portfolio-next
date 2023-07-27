@@ -20,13 +20,13 @@ module.exports = {
       },
       colors: {
         dark: {
-          primary: '#0F1624',
-          accent: '#009393',
+          primary: '#0d1608',
+          accent: '#FB8E1C',
         },
         light: {
           primary: '#F1F7ED',
-          accent: '#009393',
-          secondary: '#00e0c6',
+          accent: '#FB8E1C',
+          secondary: '#fdbd7a',
         },
       },
     },
